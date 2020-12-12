@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/imgs/favicon-32x32.png">
+    <title>Meditation</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Yanone+Kaffeesatz:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>SIT HAPPENS</h1>
+    </header>
+    <main>
+        <aside class="time-selector">
+            <h2>So, you have...</h2>
+            <button type="button" class="clear button large medium-only-expanded timer" id="one">1 minute</button>
+            <button type="button" class="clear button large medium-only-expanded timer" id="three">3 minutes</button>
+            <button type="button" class="clear button large medium-only-expanded timer" id="five">5 minutes</button>
+        </aside>
+        <section>
+            <div class="countdown"></div>
+        </section>
+        <div id="audio-section">
+            <audio controls>
+                <source src="./assets/imgs/music.mp3" type="audio/mpeg" autoplay>
+            </audio>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
