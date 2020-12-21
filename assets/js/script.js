@@ -16,32 +16,13 @@ $(".button").on("click", function (event) {
 
 function setTime() {
 	var timerInterval = setInterval(function () {
-		secondsLeft--;
+		secondsLeft-=5;
 		countdownDisplay.empty().append(secondsLeft);
 		if (secondsLeft == 0) {
 			audioEl[0].pause();
 			clearInterval(timerInterval);
 			countdownDisplay.empty().append("");
-			// getWisdom()
 		}
 	}, 5000);
 
 }
-
-// function getWisdom() {
-// 	const settings = {
-// 		"async": true,
-// 		"crossDomain": true,
-// 		"url": "https://joke3.p.rapidapi.com/v1/joke",
-// 		"method": "GET",
-// 		"headers": {
-// 			"x-rapidapi-key": "09ccbbf383mshf3eeacb5eb59f53p18954ajsnbdacf80a2524",
-// 			"x-rapidapi-host": "joke3.p.rapidapi.com"
-// 		}
-// 	};
-	
-// 	$.ajax(settings).done(function (response) {
-// 		var joke = response.content;
-// 		countdownDisplay.append(joke);
-// 	});
-// }

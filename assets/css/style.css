@@ -79,6 +79,7 @@ section {
 .countdown {
     color: rgb(203,153,126);
     font-size: 80px;
+    animation: glow 2.5s ease-in-out infinite alternate;
 }
 
 #audio-section {
@@ -88,4 +89,15 @@ section {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+}
+
+/* Keyframe */
+@keyframes glow {
+    from {
+      text-shadow: 0 0 20px rgb(221, 186, 166);
+    }
+    to {
+      text-shadow: 0 0 30px rgb(221,186,166), 0 0 10px rgb(203,153,126);
+    }
+  }
 }
