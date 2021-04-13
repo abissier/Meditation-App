@@ -1,9 +1,12 @@
 ### Meditation-App
-```
-This meditation app allows users to select a timer
-that will play music for the given amount of time
-so that the user can enjoy a moment of peace.
-```
+
+### Description
+A meditation app that allows users to listen to music from a selected length of time. 
+
+
+### Technologies Used
+HTML, CSS, Javascript, and jQuery.
+at the user can enjoy a moment of peace.
 
 ### Deployed Link
 https://abissier.github.io/Meditation-App/
