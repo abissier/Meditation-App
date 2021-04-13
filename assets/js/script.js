@@ -1,28 +1,54 @@
+var countdownDisplay = $('.countdown');
+const timeSelector = $('.time-selector');
+const timeOptions = $('.time-options');
+const audioEl = $('#audio-section audio');
+var secondsLeft = '';
 
-var countdownDisplay = $(".countdown");
-var timeSelector= $(".time-selector");
-var audioEl = $("#audio-section audio");
-var secondsLeft = "";
-
-$(".button").on("click", function (event) {
-	var countdownEL = $(this).html();
+// starts countdown and music
+$('.button').on('click', function() {
+	const countdownEL = $(this).html();
 	secondsLeft = countdownEL.slice(0, 1);
 	secondsLeft = parseInt(secondsLeft, 10) * 60;
 	countdownDisplay.empty().append(secondsLeft);
-	timeSelector.empty();
-	audioEl[0].play();
+	timeOptions.detach();
 	setTime();
+	startMusic();
 });
 
-function setTime() {
-	var timerInterval = setInterval(function () {
-		secondsLeft-=5;
-		countdownDisplay.empty().append(secondsLeft);
-		if (secondsLeft == 0) {
-			audioEl[0].pause();
-			clearInterval(timerInterval);
-			countdownDisplay.empty().append("");
-		}
-	}, 5000);
+// Restart click event
+$('#restart-btn').on('click', restartApp);
 
+// calls setTime function every 5 seconds
+var timer = setInterval(setTime, 5000);
+
+// updates countdown display, if seconds left is zero calls restart function
+function setTime() {
+	countdownDisplay.empty().append(secondsLeft);
+	secondsLeft -= 5;
+	if (secondsLeft == 0) {
+		restartApp();
+	}
+}
+
+//stop countdown function
+function stopCountDown() {
+	clearInterval(timer);
+}
+
+// start music function
+function startMusic() {
+	audioEl[0].play();
+}
+
+// stop music function
+function stopMusic() {
+	audioEl[0].pause();
+}
+
+// restarts the app (stops and clears countdown, adds back sidebar, stops music)
+function restartApp() {
+	stopCountDown();
+	timeOptions.appendTo(timeSelector);
+	countdownDisplay.empty().append('');
+	stopMusic();
 }
