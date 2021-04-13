@@ -6,9 +6,8 @@ so that the user can enjoy a moment of peace.
 ```
 
 ### Deployed Link
-```
-Link:  https://abissier.github.io/Meditation-App/
-```
+https://abissier.github.io/Meditation-App/
+
 
 ### Screen Capture
 <br>
