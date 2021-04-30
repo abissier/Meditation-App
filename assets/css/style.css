@@ -33,6 +33,12 @@ header {
 	font-size: 5rem;
 }
 
+#restart-btn:hover,
+.timer:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
 h2 {
 	font-size: 1.5rem;
 	background: rgb(203, 153, 126);
@@ -61,10 +67,6 @@ aside {
 	height: 50%;
 	padding: 60px;
 	margin: 20px;
-}
-
-.timer:hover {
-	transform: scale(1.1);
 }
 
 section {
